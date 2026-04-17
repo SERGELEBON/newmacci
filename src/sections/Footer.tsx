@@ -1,4 +1,4 @@
-import { Heart, Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Linkedin, Youtube, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
