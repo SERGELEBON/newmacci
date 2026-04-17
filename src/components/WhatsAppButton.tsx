@@ -51,7 +51,7 @@ export default function WhatsAppButton() {
       </button>
 
       {/* Pulsing Animation */}
-      <div className="absolute inset-0 rounded-full bg-emerald-500 animate-pulse opacity-75" style={{
+      <div className="absolute inset-0 rounded-full bg-emerald-500 animate-pulse opacity-75 pointer-events-none" style={{
         animation: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       }} />
     </div>
