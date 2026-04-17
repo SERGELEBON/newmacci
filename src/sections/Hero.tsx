@@ -1,13 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, ChevronDown, Play, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel';
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -55,9 +48,8 @@ const Hero = () => {
           {carouselImages.map((image, index) => (
             <div
               key={index}
-              className={`absolute inset-0 transition-opacity duration-1000 ${
-                currentSlide === index ? 'opacity-100' : 'opacity-0'
-              }`}
+              className={`absolute inset-0 transition-opacity duration-1000 ${currentSlide === index ? 'opacity-100' : 'opacity-0'
+                }`}
             >
               <img
                 src={image.src}
@@ -69,16 +61,15 @@ const Hero = () => {
         </div>
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/70 via-slate-900/50 to-slate-900/80" />
-        
+
         {/* Carousel Image Info Overlay */}
         <div className="absolute bottom-0 left-0 right-0 z-10 p-6 sm:p-8 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent">
           <div className="max-w-7xl mx-auto">
             {carouselImages.map((image, index) => (
               <div
                 key={index}
-                className={`transition-all duration-700 ${
-                  currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
-                }`}
+                className={`transition-all duration-700 ${currentSlide === index ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'
+                  }`}
               >
                 <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">
                   {image.title}
@@ -97,9 +88,8 @@ const Hero = () => {
         <div className="text-center">
           {/* Badge */}
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 transition-all duration-1000 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
             <span className="text-white/90 text-sm font-medium">
@@ -109,9 +99,8 @@ const Hero = () => {
 
           {/* Main Title */}
           <h1
-            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-200 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             <span className="block">Ensemble pour un</span>
             <span className="block mt-2">
@@ -124,20 +113,18 @@ const Hero = () => {
 
           {/* Subtitle */}
           <p
-            className={`text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed transition-all duration-1000 delay-400 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`text-lg sm:text-xl text-white/80 max-w-3xl mx-auto mb-10 leading-relaxed transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
-            Nous œuvrons pour garantir l&apos;accès à une éducation de qualité, 
-            soutenir les personnes vulnérables et créer des opportunités 
+            Nous œuvrons pour garantir l&apos;accès à une éducation de qualité,
+            soutenir les personnes vulnérables et créer des opportunités
             durables pour les communautés ivoiriennes.
           </p>
 
           {/* CTA Buttons */}
           <div
-            className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-1000 delay-600 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`flex flex-col sm:flex-row items-center justify-center gap-4 transition-all duration-1000 delay-600 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             <Button
               onClick={() => scrollToSection('#actions')}
@@ -160,9 +147,8 @@ const Hero = () => {
 
           {/* Stats Preview */}
           <div
-            className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-800 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto transition-all duration-1000 delay-800 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             {[
               { value: '5,000+', label: 'Bénéficiaires' },
@@ -184,19 +170,17 @@ const Hero = () => {
 
           {/* Carousel Indicators */}
           <div
-            className={`flex justify-center gap-2 mt-12 transition-all duration-1000 delay-900 ${
-              isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-            }`}
+            className={`flex justify-center gap-2 mt-12 transition-all duration-1000 delay-900 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+              }`}
           >
             {carouselImages.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  currentSlide === index
+                className={`h-2 rounded-full transition-all duration-300 ${currentSlide === index
                     ? 'bg-emerald-400 w-8'
                     : 'bg-white/40 w-2 hover:bg-white/60'
-                }`}
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}
@@ -223,9 +207,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-10 transition-all duration-1000 delay-1000 ${
-          isLoaded ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-10 transition-all duration-1000 delay-1000 ${isLoaded ? 'opacity-100' : 'opacity-0'
+          }`}
       >
         <button
           onClick={() => scrollToSection('#about')}
