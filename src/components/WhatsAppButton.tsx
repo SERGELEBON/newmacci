@@ -4,8 +4,8 @@ import { useState } from 'react';
 export default function WhatsAppButton() {
   const [isHovered, setIsHovered] = useState(false);
 
-  // Numéro WhatsApp MACCI - à remplacer par le vrai numéro
-  const whatsappNumber = '225XXXXXXXXXX'; // Format: pays + numéro sans le +
+  // Numéro WhatsApp MACCI
+  const whatsappNumber = '225707646361'; // Format: pays + numéro sans le +
   const whatsappMessage = "Bonjour MACCI! Je souhaite en savoir plus sur vos services.";
 
   const handleWhatsAppClick = () => {
